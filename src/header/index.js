@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./style.css";
+import { faArrowAltCircleRight } from '@fortawesome/free-solid-svg-icons';
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
@@ -22,7 +23,8 @@ const Headermain = () => {
           </Link>
           <div className="d-flex align-items-center">
           <Themetoggle />
-          <button className="menu__button  nav_ac" onClick={handleToggle}>
+          <button className="menu__button  nav_ac " onClick={handleToggle}>
+            
             {!isActive ? <VscClose /> : <VscGrabber />}
           </button>
           
@@ -38,7 +40,7 @@ const Headermain = () => {
                   <Link  onClick={handleToggle} to="/" className="my-3">Home</Link>
                   </li>
                   <li className="menu_item">
-                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Portfolio</Link>
+                    <Link  onClick={handleToggle} to="/portfolio" className="my-3"> Curriculum Vitae</Link>
                   </li>
                   <li className="menu_item">
                   <Link onClick={handleToggle} to="/about" className="my-3">About</Link>

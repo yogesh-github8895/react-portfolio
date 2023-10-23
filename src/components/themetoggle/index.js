@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaArrowAltCircleRight } from "react-icons/fa";
 import { WiMoonAltWaningCrescent4 } from "react-icons/wi";
 
 
@@ -13,7 +14,7 @@ const Themetoggle = () => {
   }, [theme]);
   return (
     <div className="nav_ac" onClick={themetoggle}>
-      <WiMoonAltWaningCrescent4 />
+      <FaArrowAltCircleRight className="blinking-button" />
     </div>
   );
 };

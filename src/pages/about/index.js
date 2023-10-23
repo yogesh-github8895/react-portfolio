@@ -6,6 +6,7 @@ import {
   dataabout,
   meta,
   worktimeline,
+  EducationalDetails,
   skills,
   services,
 } from "../../content_option";
@@ -33,6 +34,26 @@ export const About = () => {
             <div>
               <p>{dataabout.aboutme}</p>
             </div>
+          </Col>
+        </Row>
+        <Row className=" sec_sp">
+          <Col lg="5">
+            <h3 className="color_sec py-4">Educational Details</h3>
+          </Col>
+          <Col lg="7">
+            <table className="table caption-top">
+              <tbody>
+                {EducationalDetails.map((data, i) => {
+                  return (
+                    <tr key={i}>
+                      <th scope="row">{data.jobtitle}</th>
+                      <td>{data.where}</td>
+                      <td>{data.date}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </Col>
         </Row>
         <Row className=" sec_sp">
@@ -79,7 +100,7 @@ export const About = () => {
             })}
           </Col>
         </Row>
-        <Row className="sec_sp">
+        {/* <Row className="sec_sp">
           <Col lang="5">
             <h3 className="color_sec py-4">services</h3>
           </Col>
@@ -93,7 +114,7 @@ export const About = () => {
               );
             })}
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </HelmetProvider>
   );

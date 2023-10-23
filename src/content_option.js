@@ -1,74 +1,92 @@
-const logotext = "JOHN";
+const logotext = "PortFolio";
 const meta = {
-    title: "John Doe",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    title: "Yogesh Bharskar",
+    // description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
 };
 
 const introdata = {
-    title: "I’m John Doe",
+    title: "I’m Yogesh Bharskar",
     animated: {
-        first: "I love coding",
-        second: "I code cool websites",
-        third: "I develop mobile apps",
+        first: "I work as a Java Developer ",
+        // second: "I code cool websites",
+        // third: "I develop mobile apps",
     },
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum",
-    your_img_url: "https://images.unsplash.com/photo-1514790193030-c89d266d5a9d",
+    description: "I'm a Software Engineer specializing in Java at OSI Digital, based in Hyderabad.",
+    your_img_url: "src\assets\images\MicrosoftTeams-image.png",
 };
 
 const dataabout = {
     title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    aboutme: "I'm Yogesh Tryambak Bharskar, with a background in machine design engineering. I have transitioned into the role of an Associate Software Engineer specializing in Java. With a strong foundation in engineering principles and a growing expertise in Java development.",
 };
+
+const EducationalDetails = [{
+    jobtitle: "Gokhale Education Society's R. H. Sapat College of Engineering, Nashik",
+    where: "SPPU",
+    date: "Bachelor of Engineering-Mechanical",
+},
+{
+    jobtitle: "Centre for Development of Advanced Computing, Banglore",
+    where: "CDAC",
+    date: "PG - Advance Computing ",
+}
+];
+
+
 const worktimeline = [{
-        jobtitle: "Designer of week",
-        where: "YAdfi",
-        date: "2020",
+        jobtitle: "Associate Software Engineer",
+        where: "Hyderabad",
+        date: "Jan 2023 - Present",
     },
     {
-        jobtitle: "Designer of week",
-        where: "Jamalya",
-        date: "2019",
+        jobtitle: "Junior Mechanical Engineer",
+        where: "Pune",
+        date: "Aug 2021-Feb 2022 ",
     },
     {
-        jobtitle: "Designer of week",
-        where: "ALquds",
-        date: "2019",
+        jobtitle: "Machine Design Engineer",
+        where: "Nashik",
+        date: "Aug 2018-Aug 2021",
     },
 ];
 
 const skills = [{
-        name: "Python",
+        name: "Java",
         value: 90,
     },
     {
-        name: "Djano",
-        value: 85,
+        name: "SpringBoot",
+        value: 90,
     },
     {
-        name: "Javascript",
-        value: 80,
-    },
-    {
-        name: "React",
+        name: "ReactJs",
         value: 60,
     },
     {
-        name: "Jquery",
-        value: 85,
+        name: "Microservices",
+        value: 70,
     },
+    {
+        name: "MySQL",
+        value: 90,
+    },
+    {
+        name: "DynamicReports",
+        value: 85,
+    }
 ];
 
 const services = [{
-        title: "UI & UX Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Mobile Apps",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
-    },
-    {
-        title: "Wordpress Design",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    //     title: "UI & UX Design",
+    //     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    // },
+    // {
+    //     title: "Mobile Apps",
+    //     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
+    // },
+    // {
+    //     title: "Wordpress Design",
+    //     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed at nisl euismod urna bibendum sollicitudin.",
     },
 ];
 
@@ -136,8 +154,8 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "name@domain.com",
-    YOUR_FONE: "(555)123-4567",
+    YOUR_EMAIL: "yogeshcdac2022@gmail.com",
+    YOUR_FONE: "+91-(952)773-0384",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
     // creat an emailjs.com account 
     // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
@@ -148,14 +166,16 @@ const contactConfig = {
 
 const socialprofils = {
     github: "https://github.com",
-    facebook: "https://facebook.com",
-    linkedin: "https://linkedin.com",
+    facebook: "https://www.facebook.com/yogesh.bharskar",
+    linkedin: "https://www.linkedin.com/in/yogesh-bharskar-3398ab1b6/",
     twitter: "https://twitter.com",
+    instagram : "https://www.instagram.com/jordan_y8895/"
 };
 export {
     meta,
     dataabout,
     dataportfolio,
+    EducationalDetails,
     worktimeline,
     skills,
     services,

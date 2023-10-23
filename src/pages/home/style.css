@@ -232,3 +232,18 @@ section {
 .intro_sec .h_bg-image {
     filter: saturate(0.5);
 }
+
+.arrow-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 50%;
+  }
+  
+  .left-arrow {
+    left: 10px; /* Adjust the left position as needed */
+  }
+  
+  .right-arrow {
+    right: 10px; /* Adjust the right position as needed */
+  }
