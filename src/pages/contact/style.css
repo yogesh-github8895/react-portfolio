@@ -43,3 +43,8 @@ button.btn.ac_btn:hover {
         transform: translateX(100%);
     }
 }
+
+.custom-toast-body {
+    background-color: #808080; /* Gray background color */
+    color: #000000; /* Black text color */
+  }

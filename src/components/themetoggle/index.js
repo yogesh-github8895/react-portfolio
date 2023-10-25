@@ -14,7 +14,7 @@ const Themetoggle = () => {
   }, [theme]);
   return (
     <div className="nav_ac" onClick={themetoggle}>
-      <FaArrowAltCircleRight className="blinking-button" />
+      {/* <FaArrowAltCircleRight className="blinking-button" /> */}
     </div>
   );
 };

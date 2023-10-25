@@ -7,7 +7,7 @@ const meta = {
 const introdata = {
     title: "I’m Yogesh Bharskar",
     animated: {
-        first: "I work as a Java Developer ",
+        first: "I'am Working as a Java Developer ",
         // second: "I code cool websites",
         // third: "I develop mobile apps",
     },
@@ -154,14 +154,10 @@ const dataportfolio = [{
 ];
 
 const contactConfig = {
-    YOUR_EMAIL: "yogeshcdac2022@gmail.com",
+    YOUR_EMAIL: "portfolioyogesh2022@gmail.com",
     YOUR_FONE: "+91-(952)773-0384",
     description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula eu nunc et sollicitudin. Cras pulvinar, nisi at imperdiet pharetra. ",
-    // creat an emailjs.com account 
-    // check out this tutorial https://www.emailjs.com/docs/examples/reactjs/
-    YOUR_SERVICE_ID: "service_id",
-    YOUR_TEMPLATE_ID: "template_id",
-    YOUR_USER_ID: "user_id",
+
 };
 
 const socialprofils = {

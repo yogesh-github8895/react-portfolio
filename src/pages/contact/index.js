@@ -5,67 +5,43 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
-
+import axios from 'axios';
+import {ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 export const ContactUs = () => {
-  const [formData, setFormdata] = useState({
-    email: "",
-    name: "",
-    message: "",
-    loading: false,
-    show: false,
-    alertmessage: "",
-    variant: "",
+  const [formData, setFormData] = useState({
+    personName: '',
+    personEmail: '',
+    message: '',
+    isHtml:true
   });
 
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  // http://localhost:8082/api/v1/send-mail-notification/sendmail
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormdata({ loading: true });
+    axios.post('http://localhost:8080/api/v1/send-mail-notification/sendmail', formData)
+      .then((response) => {
+        toast.success(response.data)
+      //  alert(response.data)
 
-    const templateParams = {
-      from_name: formData.email,
-      user_name: formData.name,
-      to_name: contactConfig.YOUR_EMAIL,
-      message: formData.message,
-    };
-
-    emailjs
-      .send(
-        contactConfig.YOUR_SERVICE_ID,
-        contactConfig.YOUR_TEMPLATE_ID,
-        templateParams,
-        contactConfig.YOUR_USER_ID
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-          setFormdata({
-            loading: false,
-            alertmessage: "SUCCESS! ,Thankyou for your messege",
-            variant: "success",
-            show: true,
-          });
-        },
-        (error) => {
-          console.log(error.text);
-          setFormdata({
-            alertmessage: `Sorry Server is Down..!!,${error.text}`,
-            variant: "danger",
-            show: true,
-          });
-          document.getElementsByClassName("co_alert")[0].scrollIntoView();
-        }
-      );
-  };
-
-  const handleChange = (e) => {
-    setFormdata({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+                console.log('Data sent to the server:', response.data);
+      })
+      .catch((error) => {
+        // Handle errors, e.g., show an error message.
+        console.error('Error:', error);
+      });
   };
 
   return (
     <HelmetProvider>
+      <ToastContainer/>
       <Container>
         <Helmet>
           <meta charSet="utf-8" />
@@ -117,10 +93,10 @@ export const ContactUs = () => {
                 <Col lg="6" className="form-group">
                   <input
                     className="form-control"
-                    id="name"
-                    name="name"
+                    id="personName"
+                    name="personName"
                     placeholder="Name"
-                    value={formData.name || ""}
+                    value={formData.personName || ""}
                     type="text"
                     required
                     onChange={handleChange}
@@ -129,11 +105,11 @@ export const ContactUs = () => {
                 <Col lg="6" className="form-group">
                   <input
                     className="form-control rounded-0"
-                    id="email"
-                    name="email"
+                    id="personEmail"
+                    name="personEmail"
                     placeholder="Email"
                     type="email"
-                    value={formData.email || ""}
+                    value={formData.personEmail || ""}
                     required
                     onChange={handleChange}
                   />
