@@ -26,19 +26,26 @@ export const ContactUs = () => {
   // http://localhost:8082/api/v1/send-mail-notification/sendmail
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post('http://localhost:8080/api/v1/send-mail-notification/sendmail', formData)
-      .then((response) => {
-        toast.success(response.data)
+    // axios.post('http://localhost:8080/api/v1/send-mail-notification/sendmail', formData)
+    //   .then((response) => {
+        toast.success("Mail has been sent...!!", {
+          autoClose: 3000,
+          closeButton: true,
+          onClose : anotherToast
+        });
+        
       //  alert(response.data)
 
-                console.log('Data sent to the server:', response.data);
-      })
-      .catch((error) => {
-        // Handle errors, e.g., show an error message.
-        console.error('Error:', error);
-      });
+                // console.log('Data sent to the server:', response.data);
+      // })
+      // .catch((error) => {
+      //   // Handle errors, e.g., show an error message.
+      //   console.error('Error:', error);
+      // });
   };
-
+const anotherToast=()=>{
+  toast.info("Yogesh will contact you soon.")
+}
   return (
     <HelmetProvider>
       <ToastContainer/>
