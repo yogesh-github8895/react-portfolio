@@ -17,15 +17,35 @@ export const Portfolio = () => {
           <meta name="description" content={meta.description} />
           
         </Helmet>
-        <Row className="mb-5 mt-3 pt-md-3">
+        <Row className="mb-4 mt-3 pt-md-3">
+        <Col lg="8">
+            <h3 className="display-4 mb-4"> BE Certificate </h3>{" "}
+            <a href={'/be.pdf'} target="_blank">Open PDF</a>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
           <Col lg="8">
-            <h1 className="display-4 mb-4"> Curriculum Vitae </h1>{" "}
+            <h3 className="display-4 mb-4"> PG-DAC Certificate </h3>{" "}
+            <a href={'/cdac.pdf'} target="_blank">Open PDF</a>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+          <Col lg="8">
+            <h1 className="display-4 mb-4"> Confirmation Letter-OSI </h1>{" "}
+            <a href={'/confirmation letter.pdf'} target="_blank">Open PDF</a>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+          <Col lg="8">
+            <h3 className="display-4 mb-4"> Curriculum Vitae </h3>{" "}
             <a href={'/YogeshCV.pdf'} target="_blank">Open PDF</a>
+            <hr className="t_border my-4 ml-0 text-left" />
+          </Col>
+          <Col lg="8">
+            <h3 className="display-4 mb-4"> Java Certificate </h3>{" "}
+            <a href={'/java certificate.pdf'} target="_blank">Open PDF</a>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
           
         </Row>
-        <img src='/resumeImage.png' alt="My Image" />
+        
         {/* <div className="mb-5 po_items_ho">
           {dataportfolio.map((data, i) => {
             return (

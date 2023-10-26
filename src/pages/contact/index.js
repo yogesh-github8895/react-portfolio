@@ -1,11 +1,10 @@
 import React, { useState } from "react";
-import * as emailjs from "emailjs-com";
+
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import { Container, Row, Col, Alert } from "react-bootstrap";
 import { contactConfig } from "../../content_option";
-import axios from 'axios';
 import {ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 export const ContactUs = () => {
@@ -23,25 +22,13 @@ export const ContactUs = () => {
       [name]: value,
     });
   };
-  // http://localhost:8082/api/v1/send-mail-notification/sendmail
   const handleSubmit = (e) => {
     e.preventDefault();
-    // axios.post('http://localhost:8080/api/v1/send-mail-notification/sendmail', formData)
-    //   .then((response) => {
         toast.success("Mail has been sent...!!", {
           autoClose: 3000,
           closeButton: true,
           onClose : anotherToast
         });
-        
-      //  alert(response.data)
-
-                // console.log('Data sent to the server:', response.data);
-      // })
-      // .catch((error) => {
-      //   // Handle errors, e.g., show an error message.
-      //   console.error('Error:', error);
-      // });
   };
 const anotherToast=()=>{
   toast.info("Yogesh will contact you soon.")

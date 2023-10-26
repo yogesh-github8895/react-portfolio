@@ -34,18 +34,18 @@ const EducationalDetails = [{
 
 
 const worktimeline = [{
-        jobtitle: "Associate Software Engineer",
-        where: "Hyderabad",
+        jobtitle: "OSI Digital , Hyderabad",
+        where: "Associate Software Engineer",
         date: "Jan 2023 - Present",
     },
     {
-        jobtitle: "Junior Mechanical Engineer",
-        where: "Pune",
+        jobtitle: "Ukay Metal Ind Pvt Ltd , Pune",
+        where: "Junior Mechanical Engineer",
         date: "Aug 2021-Feb 2022 ",
     },
     {
-        jobtitle: "Machine Design Engineer",
-        where: "Nashik",
+        jobtitle: "Montex Glass Fibre Ind Pvt Ltd , Nashik",
+        where: "Machine Design Engineer",
         date: "Aug 2018-Aug 2021",
     },
 ];
